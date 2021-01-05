@@ -1,15 +1,40 @@
 import React from 'react'
 import logo from '../assets/logo.svg'
 import { Link } from 'react-router-dom'
-import { useProductsContext } from '../context/products_context'
 import { FaTimes } from 'react-icons/fa'
 import { links } from '../utils/constants'
 import styled from 'styled-components'
 import CartButtons from './CartButtons'
 import { useUserContext } from '../context/user_context'
+import { useGlobalContext } from '../context/global_context'
 
 const Sidebar = () => {
-  return <h4>sidebar</h4>
+  const {isSidebarOpen, closeSidebar} = useGlobalContext()
+  return (
+    <SidebarContainer>
+      <aside className={`sidebar ${isSidebarOpen ? 'show-sidebar' : null}`}>
+        <div className="sidebar-header">
+          <img src={logo} className="logo" alt="Comfy Sloth" />
+          <button className="close-btn" type="button" onClick={closeSidebar}>
+            <FaTimes />
+          </button>
+        </div>
+        <ul className="links">
+          {
+            links.map(({ id, text, url }) => {
+              return <li key={id}>
+                <Link to={url} onClick={closeSidebar}>{text}</Link>
+              </li>
+            })
+          }
+          <li>
+            <Link to="/checkout" onClick={closeSidebar}>Checkout</Link>
+          </li>
+        </ul>
+        <CartButtons />
+      </aside>
+    </SidebarContainer>
+  )
 }
 
 const SidebarContainer = styled.div`
@@ -61,12 +86,12 @@ const SidebarContainer = styled.div`
   .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background: var(--clr-white);
     transition: var(--transition);
-    transform: translate(-100%);
+    transform: translate(100%);
     z-index: -1;
   }
   .show-sidebar {

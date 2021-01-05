@@ -5,17 +5,19 @@ export const links = [
     id: 1,
     text: 'home',
     url: '/',
+    exact:true
   },
   {
     id: 2,
-    text: 'about',
-    url: '/about',
+    text: 'products',
+    url: '/products',
+    exact:true
   },
   {
     id: 3,
-    text: 'products',
-    url: '/products',
-  },
+    text: 'about',
+    url: '/about',
+  }
 ]
 
 export const services = [
