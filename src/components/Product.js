@@ -1,18 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import { formatPrice } from '../utils/helpers'
-import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-
 const Product = ({ image, name, price, id }) => {
   return (
     <Wrapper>
-      <div className="container">
-        <img src={image} alt={name} />
-        <Link to={`/products/${id}`} className="link">
-          <FaSearch />
-        </Link>
-      </div>
+      <Link to={`/products/${id}`}>
+        <div className="container">
+          <img src={image} alt={name} />
+        </div>
+      </Link>
       <footer>
         <h5>{name}</h5>
         <p>{formatPrice(price)}</p>
@@ -26,6 +23,7 @@ const Wrapper = styled.article`
     position: relative;
     background: var(--clr-black);
     border-radius: var(--radius);
+    transition: transform .2s;
   }
   img {
     width: 100%;
@@ -34,31 +32,8 @@ const Wrapper = styled.article`
     border-radius: var(--radius);
     transition: var(--transition);
   }
-  .link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: var(--clr-primary-5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    transition: var(--transition);
-    opacity: 0;
-    cursor: pointer;
-    svg {
-      font-size: 1.25rem;
-      color: var(--clr-white);
-    }
-  }
-  .container:hover img {
-    opacity: 0.5;
-  }
-  .container:hover .link {
-    opacity: 1;
+  .container:hover {
+    transform: scale(1.1);
   }
   footer {
     margin-top: 1rem;

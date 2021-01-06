@@ -4,8 +4,36 @@ import { formatPrice } from '../utils/helpers'
 import AmountButtons from './AmountButtons'
 import { FaTrash } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
-const CartItem = () => {
-  return <h4>cart item</h4>
+import { useHistory } from 'react-router-dom'
+const CartItem = ({ id, image, name, color, price, amount }) => {
+  const history = useHistory()
+  const productLink = `/products/${id.split('#')[0]}`
+  const { removeItem, toggleAmount } = useCartContext()
+  const increase = () => {
+    toggleAmount(id, amount+1)
+  }
+  const decrease = () => {
+    toggleAmount(id, amount-1)
+  }
+  return <Wrapper>
+    <div className="title" onClick={()=> history.push(productLink)}>
+      <img src={image} alt={name} />
+      <div>
+        <h5 className="name">{name}</h5>
+        <p className="color">
+          color: <span style={{ backgroundColor: color }}></span>
+        </p>
+        <h5 className="price-small">{formatPrice(price)}</h5>
+        <h5 className="sub-small">subtotal: {formatPrice(amount * price)}</h5>
+      </div>
+    </div>
+    <h5 className="price">{formatPrice(price)}</h5>
+    <AmountButtons amount={amount} increase={increase} decrease={decrease} />
+    <h5 className="subtotal">{formatPrice(amount * price)}</h5>
+    <button type="button" className="remove-btn" onClick={() => removeItem(id)}>
+      <FaTrash/>
+    </button>
+  </Wrapper>
 }
 
 const Wrapper = styled.article`
@@ -29,6 +57,7 @@ const Wrapper = styled.article`
     align-items: center;
     text-align: left;
     gap: 1rem;
+    cursor: pointer;
   }
   img {
     width: 100%;
@@ -97,7 +126,7 @@ const Wrapper = styled.article`
       font-weight: 400;
       font-size: 1rem;
     }
-    .price-small {
+    .price-small, .sub-small {
       display: none;
     }
     .price {
