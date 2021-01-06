@@ -5,7 +5,6 @@ import { FaBars } from 'react-icons/fa'
 import { Link, NavLink } from 'react-router-dom'
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
-import { useUserContext } from '../context/user_context'
 import { useGlobalContext } from '../context/global_context'
 
 const Nav = () => {
