@@ -2,7 +2,7 @@
   "name": "store",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/react-course-comfy-sloth",
+  "homepage": " https://rahulbhooteshwar.github.io/react-course-comfy-sloth/",
   "dependencies": {
     "@auth0/auth0-react": "^1.2.0",
     "@testing-library/jest-dom": "^5.11.6",
