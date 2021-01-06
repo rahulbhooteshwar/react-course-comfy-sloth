@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-course-comfy-sloth/static/css/main.742c8e16.chunk.css",
+    "main.js": "/react-course-comfy-sloth/static/js/main.d74f63f1.chunk.js",
+    "main.js.map": "/react-course-comfy-sloth/static/js/main.d74f63f1.chunk.js.map",
+    "runtime-main.js": "/react-course-comfy-sloth/static/js/runtime-main.30135a2c.js",
+    "runtime-main.js.map": "/react-course-comfy-sloth/static/js/runtime-main.30135a2c.js.map",
+    "static/js/2.db0cefe8.chunk.js": "/react-course-comfy-sloth/static/js/2.db0cefe8.chunk.js",
+    "static/js/2.db0cefe8.chunk.js.map": "/react-course-comfy-sloth/static/js/2.db0cefe8.chunk.js.map",
+    "index.html": "/react-course-comfy-sloth/index.html",
+    "static/css/main.742c8e16.chunk.css.map": "/react-course-comfy-sloth/static/css/main.742c8e16.chunk.css.map",
+    "static/js/2.db0cefe8.chunk.js.LICENSE.txt": "/react-course-comfy-sloth/static/js/2.db0cefe8.chunk.js.LICENSE.txt",
+    "static/media/hero-bcg-2.78991864.jpeg": "/react-course-comfy-sloth/static/media/hero-bcg-2.78991864.jpeg",
+    "static/media/hero-bcg.a876f19f.jpeg": "/react-course-comfy-sloth/static/media/hero-bcg.a876f19f.jpeg",
+    "static/media/logo.221f6b13.svg": "/react-course-comfy-sloth/static/media/logo.221f6b13.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30135a2c.js",
+    "static/js/2.db0cefe8.chunk.js",
+    "static/css/main.742c8e16.chunk.css",
+    "static/js/main.d74f63f1.chunk.js"
+  ]
+}
