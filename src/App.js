@@ -5,7 +5,7 @@ import {
   About, Cart, Checkout, Error, Home, Products, SingleProduct
 } from './pages'
 function App() {
-  return <Router>
+  return <Router basename={process.env.PUBLIC_URL}>
     <Navbar />
     <Sidebar />
     <Switch>
