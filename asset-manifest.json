@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-course-comfy-sloth/static/css/main.742c8e16.chunk.css",
-    "main.js": "/react-course-comfy-sloth/static/js/main.d74f63f1.chunk.js",
-    "main.js.map": "/react-course-comfy-sloth/static/js/main.d74f63f1.chunk.js.map",
+    "main.js": "/react-course-comfy-sloth/static/js/main.2647409a.chunk.js",
+    "main.js.map": "/react-course-comfy-sloth/static/js/main.2647409a.chunk.js.map",
     "runtime-main.js": "/react-course-comfy-sloth/static/js/runtime-main.30135a2c.js",
     "runtime-main.js.map": "/react-course-comfy-sloth/static/js/runtime-main.30135a2c.js.map",
     "static/js/2.db0cefe8.chunk.js": "/react-course-comfy-sloth/static/js/2.db0cefe8.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.30135a2c.js",
     "static/js/2.db0cefe8.chunk.js",
     "static/css/main.742c8e16.chunk.css",
-    "static/js/main.d74f63f1.chunk.js"
+    "static/js/main.2647409a.chunk.js"
   ]
 }
